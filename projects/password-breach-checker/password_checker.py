@@ -1,4 +1,4 @@
-# important project to show employers, video 229 of course
+
 # cbfda is a hash function (not the entire hash, just a little bit of it)
 # A hash function converts data into a fixed-length string. The same input always produces the same output, and it’s designed to be computationally difficult to reverse. They’re commonly used for password storage and data integrity checks.
 # the count tells you how many times a password has been hacked
