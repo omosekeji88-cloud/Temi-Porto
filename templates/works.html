@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<meta content="Engineering and data portfolio for Temidayo Omosekeji" name="description">
+<meta name="google" content="notranslate">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/apple-icon-180x180.png') }}">
+<link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}?v=10">
+<title>{% block title %}Temidayo Omosekeji Engineering and Data Portfolio{% endblock %}</title>
+<link href="{{ url_for('static', filename='main.3f6952e4.css') }}?v=10" rel="stylesheet">
+<link href="{{ url_for('static', filename='portfolio.css') }}?v=14" rel="stylesheet">
+
+</head>
+<body>
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+
+<header>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ url_for('home') }}" title="">01 : Home</a></li>
+          <li><a href="{{ url_for('works') }}" title="">02 : Projects</a></li>
+          <li><a href="{{ url_for('about') }}" title="">03 : About me</a></li>
+          <li><a href="{{ url_for('contact') }}" title="">04 : Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 section-container-spacer projects-intro">
+        <div class="text-center">
+          <h1 class="h2">02 : Projects</h1>
+          <p>Selected engineering, data and Python projects showing technical problem-solving, analysis and practical software development.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-container portfolio-card">
+          <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/oct-atlas.svg') }}" alt="OCT atlas project logo">
+          <h4>001/003</h4>
+          <h3>AS-OCT 3D Reconstruction and Atlas Modelling</h3>
+          <p class="project-tags">Biomedical Engineering | Python | 3D Modelling</p>
+          <p>Converted expert 2D annotations into 3D cornea, iris and lesion models, then aligned meshes using ICP/CPD registration and PCA analysis.</p>
+          <a href="{{ url_for('project_oct_atlas') }}" class="btn btn-default">View Case Study</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-container portfolio-card">
+          <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/breach-checker.svg') }}" alt="Password breach checker logo">
+          <h4>002/003</h4>
+          <h3>Password Breach Checker</h3>
+          <p class="project-tags">Python | API Integration | Cybersecurity</p>
+          <p>Built a Python application that checks whether a password appears in known breaches using secure hashing and the Have I Been Pwned API.</p>
+          <a href="#" class="btn btn-default">GitHub Coming Soon</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-container portfolio-card">
+          <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/number-game.svg') }}" alt="Number guessing game logo">
+          <h4>003/003</h4>
+          <h3>Number Guessing Game</h3>
+          <p class="project-tags">Python | Logic | Command Line</p>
+          <p>Created an interactive command-line game that challenges users to guess a random number while receiving feedback after each attempt.</p>
+          <a href="#" class="btn btn-default">GitHub Coming Soon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Temidayo Omosekeji | Engineering and Data Portfolio</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    if (typeof navActivePage === "function") {
+      navActivePage();
+    }
+  });
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='main.70a66962.js') }}?v=10"></script>
+
+</body>
+</html>

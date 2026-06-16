@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#06111d"/><stop offset="1" stop-color="#24124a"/></linearGradient></defs>
+  <rect width="1200" height="720" fill="url(#g)"/>
+  <text x="70" y="82" fill="#fff" font-size="34" font-family="Menlo, Consolas, monospace" font-weight="700">PCA Mode Visualisation</text>
+  <text x="70" y="122" fill="#b7c7d8" font-size="18" font-family="Menlo, Consolas, monospace">Statistical variation across aligned anterior-segment meshes</text>
+  <g fill="none" stroke-width="4">
+    <path d="M130 500C250 220 390 220 510 500" stroke="#58f0d0"/>
+    <path d="M360 500C480 190 620 190 740 500" stroke="#8d6bff"/>
+    <path d="M590 500C710 240 850 240 970 500" stroke="#ff6f91"/>
+  </g>
+  <g fill="#fff" opacity=".95" font-family="Menlo, Consolas, monospace" font-size="18">
+    <text x="165" y="555">-2 SD</text><text x="455" y="555">Mean</text><text x="735" y="555">+2 SD</text>
+  </g>
+  <g opacity=".35" fill="#fff">
+    <circle cx="210" cy="230" r="4"/><circle cx="315" cy="260" r="4"/><circle cx="520" cy="210" r="4"/><circle cx="820" cy="250" r="4"/><circle cx="930" cy="310" r="4"/>
+  </g>
+</svg>

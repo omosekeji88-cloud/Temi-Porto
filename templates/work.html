@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<meta content="Engineering and data portfolio for Temidayo Omosekeji" name="description">
+<meta name="google" content="notranslate">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/apple-icon-180x180.png') }}">
+<link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}?v=10">
+<title>{% block title %}Temidayo Omosekeji Engineering and Data Portfolio{% endblock %}</title>
+<link href="{{ url_for('static', filename='main.3f6952e4.css') }}?v=10" rel="stylesheet">
+<link href="{{ url_for('static', filename='portfolio.css') }}?v=14" rel="stylesheet">
+
+</head>
+<body>
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+
+<header>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ url_for('home') }}" title="">01 : Home</a></li>
+          <li><a href="{{ url_for('works') }}" title="">02 : Projects</a></li>
+          <li><a href="{{ url_for('about') }}" title="">03 : About me</a></li>
+          <li><a href="{{ url_for('contact') }}" title="">04 : Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="section-container-spacer text-center">
+          <h1 class="h2">AS-OCT 3D Reconstruction and Atlas Modelling</h1>
+          <p class="project-tags">Biomedical Engineering | Python | Registration | PCA | Atlas Modelling</p>
+        </div>
+        <p>Developed a 3D reconstruction and atlas-modelling pipeline for anterior-segment OCT scans. The project converted expert 2D annotations into 3D cornea, iris and lesion models, aligned patient-specific meshes using ICP/CPD registration, and applied PCA to analyse anatomical variation and map keratitis lesion distribution in a shared atlas space.</p>
+        <div class="button-row">
+          <a href="#" class="btn btn-default">GitHub Repository Coming Soon</a>
+          <a href="{{ url_for('works') }}" class="btn btn-primary">Back to Projects</a>
+        </div>
+        <div class="abstract-showcase">
+          <h2 class="h3">Project Abstract</h2>
+          <p>This screenshot gives visitors the academic context without publishing the full dissertation PDF.</p>
+          <img src="{{ url_for('static', filename='assets/dissertation-results/abstract.png') }}" alt="Dissertation abstract for AS-OCT atlas modelling project">
+        </div>
+
+        <h2 class="h3 results-heading">Selected Results</h2>
+
+        <div class="results-summary">
+          <p>This is a selected snapshot of my final-year dissertation project, where I built a Python-based workflow for 3D reconstruction and statistical analysis of anterior-segment OCT data. The showcased outputs include the reconstruction pipeline, 3D cornea/iris/lesion models, ICP alignment visualisations, CPD metric tables, PCA scree plots and an atlas-space lesion-frequency map. Together, these demonstrate how I used Python-driven data processing, geometric registration and statistical modelling to transform 2D clinical annotations into interpretable 3D anatomical and pathology outputs.</p>
+        </div>
+        <div class="project-image-grid dissertation-gallery">
+          <figure class="project-figure project-figure--tall">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/workflow.png') }}" alt="Workflow flowchart from AS-OCT annotations to lesion atlas">
+            <figcaption>Pipeline: AS-OCT annotations to lesion atlas</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/patient-3d-reconstruction.png') }}" alt="Patient 1 reconstructed cornea, iris and lesion surfaces">
+            <figcaption>3D reconstruction of cornea, iris and lesion surfaces</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/cornea-icp-overlay.png') }}" alt="Post-ICP corneal alignment overlay">
+            <figcaption>Post-ICP corneal alignment overlay</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/iris-icp-overlay.png') }}" alt="Post-ICP iris alignment overlay">
+            <figcaption>Post-ICP iris alignment overlay</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/cornea-pca-scree.png') }}" alt="Cornea PCA scree plot">
+            <figcaption>Cornea PCA scree plot</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/iris-pca-scree.png') }}" alt="Iris PCA scree plot">
+            <figcaption>Iris PCA scree plot</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/lesion-frequency-map.png') }}" alt="Corneal lesion frequency map">
+            <figcaption>Corneal lesion-frequency atlas map</figcaption>
+          </figure>
+          <figure class="project-figure">
+            <img src="{{ url_for('static', filename='assets/dissertation-results/registration-metrics-table.png') }}" alt="Registration improvement metrics table">
+            <figcaption>ICP/CPD registration improvement metrics</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Temidayo Omosekeji | Engineering and Data Portfolio</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    if (typeof navActivePage === "function") {
+      navActivePage();
+    }
+  });
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='main.70a66962.js') }}?v=10"></script>
+
+</body>
+</html>

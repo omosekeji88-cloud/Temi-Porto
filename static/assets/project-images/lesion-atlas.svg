@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs>
+    <radialGradient id="hot" cx="55%" cy="50%">
+      <stop offset="0" stop-color="#ffdd57"/>
+      <stop offset=".35" stop-color="#ff6f91"/>
+      <stop offset="1" stop-color="#3f2f91"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#050712"/><stop offset="1" stop-color="#10202b"/></linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="70" y="82" fill="#fff" font-size="34" font-family="Menlo, Consolas, monospace" font-weight="700">Lesion Frequency Atlas</text>
+  <text x="70" y="122" fill="#b7c7d8" font-size="18" font-family="Menlo, Consolas, monospace">Pathology distribution mapped into a shared atlas space</text>
+  <ellipse cx="610" cy="390" rx="360" ry="180" fill="#08151d" stroke="#58f0d0" stroke-width="4"/>
+  <ellipse cx="610" cy="390" rx="290" ry="125" fill="url(#hot)" opacity=".86"/>
+  <ellipse cx="610" cy="390" rx="160" ry="70" fill="#ffdd57" opacity=".72"/>
+  <g font-family="Menlo, Consolas, monospace" font-size="17" fill="#fff">
+    <text x="110" y="610">Low</text><rect x="165" y="596" width="260" height="18" fill="#3f2f91"/>
+    <rect x="425" y="596" width="260" height="18" fill="#ff6f91"/><rect x="685" y="596" width="260" height="18" fill="#ffdd57"/>
+    <text x="965" y="610">High</text>
+  </g>
+</svg>

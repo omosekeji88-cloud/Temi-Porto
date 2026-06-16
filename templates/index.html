@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<meta content="Engineering and data portfolio for Temidayo Omosekeji" name="description">
+<meta name="google" content="notranslate">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/apple-icon-180x180.png') }}">
+<link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}?v=10">
+<title>{% block title %}Temidayo Omosekeji Engineering and Data Portfolio{% endblock %}</title>
+<link href="{{ url_for('static', filename='main.3f6952e4.css') }}?v=10" rel="stylesheet">
+<link href="{{ url_for('static', filename='portfolio.css') }}?v=14" rel="stylesheet">
+
+</head>
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+
+<header>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ url_for('home') }}" title="">01 : Home</a></li>
+          <li><a href="{{ url_for('works') }}" title="">02 : Projects</a></li>
+          <li><a href="{{ url_for('about') }}" title="">03 : About me</a></li>
+          <li><a href="{{ url_for('contact') }}" title="">04 : Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="hero-full-container portfolio-hero background-image-container white-text-container" style="background-image: url('{{ url_for('static', filename='assets/images/space.jpg') }}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="hero-full-wrapper">
+          <div class="text-content">
+            <h1>Hello, I'm Temidayo Omosekeji.</h1>
+            <span class="hero-line hero-static-line">Biomedical Engineering graduate.</span>
+            <span id="hero-typed" aria-live="polite"></span><span class="hero-cursor">|</span>
+            <div id="hero-phrases" hidden>
+              <span>Aspiring data analyst, building projects with Python and SQL.</span>
+              <span>Open to graduate and entry level opportunities.</span>
+            </div>
+            <div class="hero-actions">
+              <a href="{{ url_for('works') }}" class="btn btn-default btn-lg">View Projects</a>
+              <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    if (typeof movingBackgroundImage === "function") {
+      movingBackgroundImage();
+    }
+
+    var typedTarget = document.getElementById("hero-typed");
+    var phraseNodes = document.querySelectorAll("#hero-phrases span");
+    var phrases = Array.prototype.map.call(phraseNodes, function (node) {
+      return node.textContent;
+    });
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var deleting = false;
+
+    function typeHeroText() {
+      if (!typedTarget || phrases.length === 0) {
+        return;
+      }
+
+      var phrase = phrases[phraseIndex];
+      typedTarget.textContent = phrase.slice(0, charIndex);
+
+      if (!deleting && charIndex < phrase.length) {
+        charIndex += 1;
+        setTimeout(typeHeroText, 45);
+        return;
+      }
+
+      if (!deleting && charIndex === phrase.length) {
+        deleting = true;
+        setTimeout(typeHeroText, 1500);
+        return;
+      }
+
+      if (deleting && charIndex > 0) {
+        charIndex -= 1;
+        setTimeout(typeHeroText, 25);
+        return;
+      }
+
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(typeHeroText, 350);
+    }
+
+    typeHeroText();
+  });
+</script>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Temidayo Omosekeji | Engineering and Data Portfolio</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    if (typeof navActivePage === "function") {
+      navActivePage();
+    }
+  });
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='main.70a66962.js') }}?v=10"></script>
+
+</body>
+</html>

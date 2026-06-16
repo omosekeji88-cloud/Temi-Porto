@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AS-OCT atlas modelling workflow</title>
+  <desc id="desc">Pipeline from annotations to 3D reconstruction, registration, PCA, and lesion atlas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#070816"/>
+      <stop offset="0.55" stop-color="#17142c"/>
+      <stop offset="1" stop-color="#03040a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1">
+      <stop offset="0" stop-color="#151936"/>
+      <stop offset="1" stop-color="#091a22"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <g fill="#fff" opacity=".55">
+    <circle cx="85" cy="80" r="2"/><circle cx="220" cy="140" r="1.5"/><circle cx="1050" cy="90" r="2"/>
+    <circle cx="1010" cy="590" r="1.5"/><circle cx="710" cy="70" r="1.5"/><circle cx="1120" cy="380" r="2"/>
+  </g>
+  <text x="70" y="86" fill="#fff" font-family="Menlo, Consolas, monospace" font-size="34" font-weight="700">AS-OCT Atlas Modelling Pipeline</text>
+  <text x="70" y="126" fill="#b7c7d8" font-family="Menlo, Consolas, monospace" font-size="18">Expert 2D annotations to shared 3D pathology atlas</text>
+  <g font-family="Menlo, Consolas, monospace" font-weight="700" text-anchor="middle">
+    <g transform="translate(70 220)">
+      <rect width="150" height="120" rx="16" fill="url(#card)" stroke="#58f0d0" stroke-width="3"/>
+      <text x="75" y="44" fill="#58f0d0" font-size="18">01</text><text x="75" y="76" fill="#fff" font-size="15">2D OCT</text><text x="75" y="98" fill="#fff" font-size="15">annotations</text>
+    </g>
+    <path d="M235 280H315" stroke="#58f0d0" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(330 220)">
+      <rect width="150" height="120" rx="16" fill="url(#card)" stroke="#8d6bff" stroke-width="3"/>
+      <text x="75" y="44" fill="#8d6bff" font-size="18">02</text><text x="75" y="76" fill="#fff" font-size="15">3D mesh</text><text x="75" y="98" fill="#fff" font-size="15">rebuild</text>
+    </g>
+    <path d="M495 280H575" stroke="#8d6bff" stroke-width="5"/>
+    <g transform="translate(590 220)">
+      <rect width="150" height="120" rx="16" fill="url(#card)" stroke="#ff6f91" stroke-width="3"/>
+      <text x="75" y="44" fill="#ff6f91" font-size="18">03</text><text x="75" y="76" fill="#fff" font-size="15">ICP / CPD</text><text x="75" y="98" fill="#fff" font-size="15">registration</text>
+    </g>
+    <path d="M755 280H835" stroke="#ff6f91" stroke-width="5"/>
+    <g transform="translate(850 220)">
+      <rect width="150" height="120" rx="16" fill="url(#card)" stroke="#ffd166" stroke-width="3"/>
+      <text x="75" y="44" fill="#ffd166" font-size="18">04</text><text x="75" y="76" fill="#fff" font-size="15">PCA shape</text><text x="75" y="98" fill="#fff" font-size="15">analysis</text>
+    </g>
+    <path d="M925 355V435" stroke="#ffd166" stroke-width="5"/>
+    <g transform="translate(760 450)">
+      <rect width="330" height="130" rx="18" fill="url(#card)" stroke="#58f0d0" stroke-width="3" filter="url(#glow)"/>
+      <text x="165" y="48" fill="#58f0d0" font-size="18">05</text><text x="165" y="82" fill="#fff" font-size="17">Lesion-frequency atlas map</text>
+    </g>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#58f0d0"/>
+    </marker>
+  </defs>
+</svg>
