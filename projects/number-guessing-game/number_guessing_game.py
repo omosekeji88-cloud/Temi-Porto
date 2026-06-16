@@ -1,41 +1,14 @@
-import random
+from random import randint
+randint (1,10)
+secret_number = randint(1,10)
 
+guess = 0
+while guess != secret_number:
+    guess = int(input("Guess a number between 1 and 10: "))
+    if guess > 10 or guess < 1:
+        print(' STAY IN THE RANGE MATE')
 
-def choose_difficulty():
-    difficulty = input('Choose a difficulty: easy or hard: ').strip().lower()
-    if difficulty == 'hard':
-        return 5
-    return 10
-
-
-def play_game():
-    secret_number = random.randint(1, 100)
-    attempts = choose_difficulty()
-
-    print('I am thinking of a number between 1 and 100.')
-
-    while attempts > 0:
-        print(f'You have {attempts} attempts remaining.')
-
-        try:
-            guess = int(input('Make a guess: '))
-        except ValueError:
-            print('Please enter a whole number.')
-            continue
-
-        if guess == secret_number:
-            print(f'Correct. The number was {secret_number}.')
-            return
-
-        if guess < secret_number:
-            print('Too low.')
-        else:
-            print('Too high.')
-
-        attempts -= 1
-
-    print(f'Out of attempts. The number was {secret_number}.')
-
-
-if __name__ == '__main__':
-    play_game()
+    if guess != secret_number:
+        print("wrong")
+    if guess == secret_number:
+        print("you guessed right")
