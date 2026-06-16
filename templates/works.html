@@ -12,7 +12,7 @@
 <link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}?v=10">
 <title>{% block title %}Temidayo Omosekeji Engineering and Data Portfolio{% endblock %}</title>
 <link href="{{ url_for('static', filename='main.3f6952e4.css') }}?v=10" rel="stylesheet">
-<link href="{{ url_for('static', filename='portfolio.css') }}?v=14" rel="stylesheet">
+<link href="{{ url_for('static', filename='portfolio.css') }}?v=15" rel="stylesheet">
 
 </head>
 <body>
@@ -44,7 +44,7 @@
 
 <div class="section-container">
   <div class="container">
-    <div class="row">
+    <div class="row projects-list">
       <div class="col-sm-8 col-sm-offset-2 section-container-spacer projects-intro">
         <div class="text-center">
           <h1 class="h2">02 : Projects</h1>
@@ -54,30 +54,50 @@
       <div class="col-md-4">
         <div class="card-container portfolio-card">
           <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/oct-atlas.svg') }}" alt="OCT atlas project logo">
-          <h4>001/003</h4>
+          <h4>001/005</h4>
           <h3>AS-OCT 3D Reconstruction and Atlas Modelling</h3>
-          <p class="project-tags">Biomedical Engineering | Python | 3D Modelling</p>
-          <p>Converted expert 2D annotations into 3D cornea, iris and lesion models, then aligned meshes using ICP/CPD registration and PCA analysis.</p>
+          <p class="project-tags">Biomedical Engineering | Python | 3D Modelling | Statistical Analysis</p>
+          <p>Converted expert 2D annotations into 3D cornea, iris and lesion models, then aligned meshes using ICP/CPD registration and PCA analysis. This demonstrates data cleaning, geometric processing and analytical communication.</p>
           <a href="{{ url_for('project_oct_atlas') }}" class="btn btn-default">View Case Study</a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card-container portfolio-card">
           <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/breach-checker.svg') }}" alt="Password breach checker logo">
-          <h4>002/003</h4>
+          <h4>002/005</h4>
           <h3>Password Breach Checker</h3>
-          <p class="project-tags">Python | API Integration | Cybersecurity</p>
-          <p>Built a Python application that checks whether a password appears in known breaches using secure hashing and the Have I Been Pwned API.</p>
+          <p class="project-tags">Python | API Integration | Cybersecurity | Hashing</p>
+          <p>Built a Python tool using the Have I Been Pwned API to check password exposure with SHA-1 hashing and k-anonymity. Relevant to data analyst work because it shows secure API use, data matching and privacy-aware processing.</p>
+          <a href="#" class="btn btn-default">GitHub Coming Soon</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-container portfolio-card">
+          <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/hacker-news.svg') }}" alt="Hacker News scraping project logo">
+          <h4>003/005</h4>
+          <h3>Hacker News Scraper</h3>
+          <p class="project-tags">Python | Web Scraping | BeautifulSoup | Data Filtering</p>
+          <p>Scraped Hacker News pages, extracted story titles, links and vote counts, then filtered stories above a points threshold. This is directly relevant to data analytics because it collects raw web data and transforms it into useful ranked information.</p>
+          <a href="#" class="btn btn-default">GitHub Coming Soon</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-container portfolio-card">
+          <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/bluesky-bot.svg') }}" alt="BlueSky bot project logo">
+          <h4>004/005</h4>
+          <h3>BlueSky Bot</h3>
+          <p class="project-tags">Python | Social API | Automation | Data Streams</p>
+          <p>Created a Python automation script using the BlueSky/AT Protocol client to post updates, read timeline data, inspect followers and interact with matching posts. It shows practical API handling, automation logic and event-style data processing.</p>
           <a href="#" class="btn btn-default">GitHub Coming Soon</a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card-container portfolio-card">
           <img class="project-logo" src="{{ url_for('static', filename='assets/project-logos/number-game.svg') }}" alt="Number guessing game logo">
-          <h4>003/003</h4>
+          <h4>005/005</h4>
           <h3>Number Guessing Game</h3>
-          <p class="project-tags">Python | Logic | Command Line</p>
-          <p>Created an interactive command-line game that challenges users to guess a random number while receiving feedback after each attempt.</p>
+          <p class="project-tags">Python | Logic | Control Flow | Command Line</p>
+          <p>Created an interactive command-line game that challenges users to guess a randomly generated number while receiving feedback after each attempt. It highlights core programming logic, loops, conditionals and user input handling.</p>
           <a href="#" class="btn btn-default">GitHub Coming Soon</a>
         </div>
       </div>

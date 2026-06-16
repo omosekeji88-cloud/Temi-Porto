@@ -253,3 +253,31 @@ body {
   border-left: 4px solid var(--teal);
   font-weight: 700;
 }
+
+
+.portfolio-hero .hero-actions .btn {
+  border-width: 2px;
+  font-weight: 700;
+  text-shadow: none;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .45);
+}
+
+.portfolio-hero .hero-actions .btn-default {
+  color: #06111d;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.portfolio-hero .hero-actions .btn-primary {
+  color: #fff;
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+.portfolio-hero .hero-actions .btn-default:hover,
+.portfolio-hero .hero-actions .btn-primary:hover {
+  color: #06111d;
+  background: #fff;
+  border-color: #fff;
+}
+
