@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import csv
+import os
+import smtplib
+from email.message import EmailMessage
 from pathlib import Path
 
 app = Flask(__name__)
 print(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent
+CONTACT_EMAIL = 'omosekeji88@gmail.com'
 
 
 @app.route('/favicon.ico')
@@ -70,9 +74,42 @@ def write_to_csv(data):
         })
 
 
+def send_contact_email(data):
+    password = os.environ.get('CONTACT_EMAIL_PASSWORD')
+    if not password:
+        print('Contact form saved, but email was not sent because CONTACT_EMAIL_PASSWORD is not set.')
+        return False
+
+    sender = os.environ.get('CONTACT_EMAIL_FROM', CONTACT_EMAIL)
+    smtp_server = os.environ.get('CONTACT_SMTP_SERVER', 'smtp.gmail.com')
+    smtp_port = int(os.environ.get('CONTACT_SMTP_PORT', '587'))
+
+    message = EmailMessage()
+    message['Subject'] = f"Portfolio contact form: {data.get('subject', 'New message')}"
+    message['From'] = sender
+    message['To'] = CONTACT_EMAIL
+    message['Reply-To'] = data.get('email', '')
+    message.set_content(
+        f"From: {data.get('email', '')}\n"
+        f"Subject: {data.get('subject', '')}\n\n"
+        f"Message:\n{data.get('message', '')}\n"
+    )
+
+    with smtplib.SMTP(smtp_server, smtp_port) as smtp:
+        smtp.starttls()
+        smtp.login(sender, password)
+        smtp.send_message(message)
+    return True
+
+
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     data = request.form.to_dict()
     write_to_txt(data)
     write_to_csv(data)
-    return redirect(url_for('contact', submitted='true'))
+    try:
+        email_sent = send_contact_email(data)
+    except Exception as error:
+        print(f'Contact email failed: {error}')
+        email_sent = False
+    return redirect(url_for('contact', submitted='true', emailed=str(email_sent).lower()))
