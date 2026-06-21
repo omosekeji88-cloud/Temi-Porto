@@ -12,7 +12,7 @@
 <link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}?v=10">
 <title>{% block title %}Temidayo Omosekeji Engineering and Data Portfolio{% endblock %}</title>
 <link href="{{ url_for('static', filename='main.3f6952e4.css') }}?v=10" rel="stylesheet">
-<link href="{{ url_for('static', filename='portfolio.css') }}?v=17" rel="stylesheet">
+<link href="{{ url_for('static', filename='portfolio.css') }}?v=19" rel="stylesheet">
 
 </head>
 <body>
@@ -102,6 +102,25 @@
         </div>
       </div>
     </div>
+
+    <section class="certifications-section" aria-labelledby="certifications-heading">
+      <div class="certifications-heading">
+        <p class="section-kicker">Continued learning</p>
+        <h2 id="certifications-heading">Certifications and Professional Development</h2>
+      </div>
+      <article class="certification-entry">
+        <a class="certificate-preview" href="https://www.udemy.com/certificate/UC-acceb198-05d6-4889-9ee6-d2b1c7bebe1d/" target="_blank" rel="noopener" aria-label="View The Complete Python Developer certificate on Udemy">
+          <img src="{{ url_for('static', filename='assets/certifications/complete-python-developer-certificate.png') }}" alt="Udemy certificate awarded to Temi Omosekeji for completing The Complete Python Developer course">
+        </a>
+        <div class="certification-copy">
+          <p class="certification-provider">Udemy &middot; Andrei Neagoie</p>
+          <h3>The Complete Python Developer</h3>
+          <p>Completed 21 June 2026 &middot; 31 hours</p>
+          <p>Professional development covering practical Python programming, automation, web development, data handling and software-development fundamentals.</p>
+          <a class="btn btn-default" href="https://www.udemy.com/certificate/UC-acceb198-05d6-4889-9ee6-d2b1c7bebe1d/" target="_blank" rel="noopener">View Credential</a>
+        </div>
+      </article>
+    </section>
   </div>
 </div>
 
