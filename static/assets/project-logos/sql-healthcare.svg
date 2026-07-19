@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Healthcare SQL analytics logo</title>
+  <desc id="desc">A database cylinder with a medical cross and SQL graph accents.</desc>
+  <rect width="160" height="160" rx="28" fill="#07111f"/>
+  <path d="M30 48c0-17 100-17 100 0v64c0 17-100 17-100 0V48z" fill="#12385f"/>
+  <ellipse cx="80" cy="48" rx="50" ry="18" fill="#4fe0c6"/>
+  <path d="M30 78c0 17 100 17 100 0" fill="none" stroke="#4fe0c6" stroke-width="6" opacity=".75"/>
+  <path d="M30 108c0 17 100 17 100 0" fill="none" stroke="#4fe0c6" stroke-width="6" opacity=".55"/>
+  <rect x="70" y="60" width="20" height="48" rx="4" fill="#ffffff"/>
+  <rect x="56" y="74" width="48" height="20" rx="4" fill="#ffffff"/>
+  <path d="M48 120h18l10-16 13 20 12-28 12 24h19" fill="none" stroke="#ffcf5a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="145" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">SQL</text>
+</svg>
