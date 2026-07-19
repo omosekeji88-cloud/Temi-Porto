@@ -322,6 +322,11 @@ body {
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
   gap: 36px;
   align-items: center;
+  margin-bottom: 44px;
+}
+
+.certification-entry:last-child {
+  margin-bottom: 0;
 }
 
 .certificate-preview {
@@ -356,6 +361,11 @@ body {
 
 .certification-copy .btn {
   margin-top: 10px;
+}
+
+.certification-skills {
+  color: #0a6f55;
+  letter-spacing: .02em;
 }
 
 @media (max-width: 768px) {
