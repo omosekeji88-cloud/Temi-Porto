@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Fraud Analytics Dashboard</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #101d31;
+      --panel-2: #13263f;
+      --text: #f7fbff;
+      --muted: #9fb4d0;
+      --teal: #4fe0c6;
+      --gold: #ffcf5a;
+      --red: #ff6b7a;
+      --line: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+    main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0; }
+    header { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: end; margin-bottom: 28px; }
+    h1 { margin: 0 0 14px; font-size: clamp(32px, 5vw, 58px); line-height: 1; }
+    p { color: var(--muted); line-height: 1.65; }
+    .source { text-align: right; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+    .panel {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--line);
+      padding: 22px;
+      box-shadow: 0 18px 42px rgba(0,0,0,.24);
+    }
+    .kpi span { display: block; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+    .kpi strong { display: block; margin-top: 10px; font-size: 30px; color: var(--teal); }
+    .wide { grid-column: span 2; }
+    .full { grid-column: 1 / -1; }
+    h2 { margin: 0 0 16px; font-size: 22px; }
+    .chart { display: flex; align-items: end; gap: 7px; min-height: 220px; padding-top: 14px; border-bottom: 1px solid var(--line); }
+    .bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .bar {
+      width: 100%;
+      min-height: 3px;
+      background: linear-gradient(180deg, var(--red), var(--gold));
+      border-radius: 7px 7px 0 0;
+    }
+    .bar-count { font-size: 11px; color: var(--muted); min-height: 13px; }
+    .bar-label { font-size: 10px; color: var(--muted); }
+    .horizontal { display: grid; gap: 12px; }
+    .risk-row { display: grid; grid-template-columns: 92px 1fr 74px; gap: 12px; align-items: center; }
+    .track { height: 14px; background: rgba(255,255,255,.08); border-radius: 999px; overflow: hidden; }
+    .fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--gold), var(--red)); }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    th { color: var(--muted); text-transform: uppercase; font-size: 12px; }
+    .note { color: var(--muted); font-size: 13px; margin-top: 14px; }
+    @media (max-width: 860px) {
+      header, .grid { grid-template-columns: 1fr; }
+      .wide, .full { grid-column: auto; }
+      .source { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <section>
+        <h1>Finance Fraud Analytics Dashboard</h1>
+        <p>Interactive portfolio dashboard built from the Kaggle credit card fraud dataset. It highlights class imbalance, fraud-rate patterns, transaction value risk and high-value fraudulent transactions.</p>
+      </section>
+      <section class="source">
+        <p><strong>Dataset:</strong> Kaggle mlg-ulb/creditcardfraud<br><strong>Focus:</strong> BI reporting, fraud monitoring, analyst storytelling</p>
+      </section>
+    </header>
+
+    <section class="grid">
+      <div class="panel kpi"><span>Total transactions</span><strong>284,807</strong></div>
+      <div class="panel kpi"><span>Fraud transactions</span><strong>492</strong></div>
+      <div class="panel kpi"><span>Fraud rate</span><strong>0.173%</strong></div>
+      <div class="panel kpi"><span>Fraud amount</span><strong>$60,128</strong></div>
+
+      <div class="panel wide">
+        <h2>Fraud Rate by Hour of Day</h2>
+        <div class="chart" aria-label="Fraud rate by hour chart">
+          <div class="bar-wrap"><div class="bar-count">6</div><div class="bar" style="height:3.3px"></div><div class="bar-label">0</div></div><div class="bar-wrap"><div class="bar-count">10</div><div class="bar" style="height:10.0px"></div><div class="bar-label">1</div></div><div class="bar-wrap"><div class="bar-count">57</div><div class="bar" style="height:71.9px"></div><div class="bar-label">2</div></div><div class="bar-wrap"><div class="bar-count">17</div><div class="bar" style="height:20.4px"></div><div class="bar-label">3</div></div><div class="bar-wrap"><div class="bar-count">23</div><div class="bar" style="height:43.7px"></div><div class="bar-label">4</div></div><div class="bar-wrap"><div class="bar-count">11</div><div class="bar" style="height:15.5px"></div><div class="bar-label">5</div></div><div class="bar-wrap"><div class="bar-count">9</div><div class="bar" style="height:9.2px"></div><div class="bar-label">6</div></div><div class="bar-wrap"><div class="bar-count">23</div><div class="bar" style="height:13.3px"></div><div class="bar-label">7</div></div><div class="bar-wrap"><div class="bar-count">9</div><div class="bar" style="height:3.7px"></div><div class="bar-label">8</div></div><div class="bar-wrap"><div class="bar-count">16</div><div class="bar" style="height:4.2px"></div><div class="bar-label">9</div></div><div class="bar-wrap"><div class="bar-count">8</div><div class="bar" style="height:3.0px"></div><div class="bar-label">10</div></div><div class="bar-wrap"><div class="bar-count">53</div><div class="bar" style="height:13.2px"></div><div class="bar-label">11</div></div><div class="bar-wrap"><div class="bar-count">17</div><div class="bar" style="height:4.6px"></div><div class="bar-label">12</div></div><div class="bar-wrap"><div class="bar-count">17</div><div class="bar" style="height:4.6px"></div><div class="bar-label">13</div></div><div class="bar-wrap"><div class="bar-count">23</div><div class="bar" style="height:5.8px"></div><div class="bar-label">14</div></div><div class="bar-wrap"><div class="bar-count">26</div><div class="bar" style="height:6.6px"></div><div class="bar-label">15</div></div><div class="bar-wrap"><div class="bar-count">22</div><div class="bar" style="height:5.6px"></div><div class="bar-label">16</div></div><div class="bar-wrap"><div class="bar-count">29</div><div class="bar" style="height:7.5px"></div><div class="bar-label">17</div></div><div class="bar-wrap"><div class="bar-count">33</div><div class="bar" style="height:8.1px"></div><div class="bar-label">18</div></div><div class="bar-wrap"><div class="bar-count">19</div><div class="bar" style="height:5.1px"></div><div class="bar-label">19</div></div><div class="bar-wrap"><div class="bar-count">18</div><div class="bar" style="height:4.5px"></div><div class="bar-label">20</div></div><div class="bar-wrap"><div class="bar-count">16</div><div class="bar" style="height:3.8px"></div><div class="bar-label">21</div></div><div class="bar-wrap"><div class="bar-count">9</div><div class="bar" style="height:3.0px"></div><div class="bar-label">22</div></div><div class="bar-wrap"><div class="bar-count">21</div><div class="bar" style="height:8.1px"></div><div class="bar-label">23</div></div>
+        </div>
+        <p class="note">Bar height shows fraud-rate percentage by transaction hour. Numbers above bars show fraud transaction count.</p>
+      </div>
+
+      <div class="panel wide">
+        <h2>Fraud Risk by Amount Bucket</h2>
+        <div class="horizontal">
+          <div class="risk-row"><strong>$0-$10</strong><div class="track"><div class="fill" style="width:7.7%"></div></div><span>0.256%</span></div><div class="risk-row"><strong>$10-$50</strong><div class="track"><div class="fill" style="width:1.8%"></div></div><span>0.061%</span></div><div class="risk-row"><strong>$50-$100</strong><div class="track"><div class="fill" style="width:4.5%"></div></div><span>0.151%</span></div><div class="risk-row"><strong>$100-$250</strong><div class="track"><div class="fill" style="width:4.9%"></div></div><span>0.162%</span></div><div class="risk-row"><strong>$250-$1,000</strong><div class="track"><div class="fill" style="width:9.8%"></div></div><span>0.328%</span></div><div class="risk-row"><strong>$1,000+</strong><div class="track"><div class="fill" style="width:8.8%"></div></div><span>0.293%</span></div>
+        </div>
+        <p class="note">The dataset is highly imbalanced, so small changes in fraud rate matter.</p>
+      </div>
+
+      <div class="panel wide">
+        <h2>Amount Bucket Summary</h2>
+        <table>
+          <thead><tr><th>Bucket</th><th>Transactions</th><th>Fraud</th><th>Fraud Rate</th></tr></thead>
+          <tbody>
+            <tr><td>$0-$10</td><td>97,314</td><td>249</td><td>0.256%</td></tr><tr><td>$10-$50</td><td>92,390</td><td>56</td><td>0.061%</td></tr><tr><td>$50-$100</td><td>37,718</td><td>57</td><td>0.151%</td></tr><tr><td>$100-$250</td><td>34,482</td><td>56</td><td>0.162%</td></tr><tr><td>$250-$1,000</td><td>19,834</td><td>65</td><td>0.328%</td></tr><tr><td>$1,000+</td><td>3,069</td><td>9</td><td>0.293%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel wide">
+        <h2>Highest-Value Fraud Sample</h2>
+        <table>
+          <thead><tr><th>Hour</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody><tr><td>10:00</td><td>$2,125.87</td><td>Fraud</td></tr>
+<tr><td>02:00</td><td>$1,809.68</td><td>Fraud</td></tr>
+<tr><td>18:00</td><td>$1,504.93</td><td>Fraud</td></tr>
+<tr><td>17:00</td><td>$1,402.16</td><td>Fraud</td></tr>
+<tr><td>16:00</td><td>$1,389.56</td><td>Fraud</td></tr>
+<tr><td>18:00</td><td>$1,354.25</td><td>Fraud</td></tr>
+<tr><td>12:00</td><td>$1,335.00</td><td>Fraud</td></tr>
+<tr><td>05:00</td><td>$1,218.89</td><td>Fraud</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="panel full">
+        <h2>Analyst Summary</h2>
+        <p>The dataset contains 284,807 transactions but only 492 confirmed fraud cases, producing a fraud rate of 0.173%. This makes the project useful for showing BI work on imbalanced data, where percentage rates, segmented views and high-risk transaction monitoring are more informative than raw counts alone.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

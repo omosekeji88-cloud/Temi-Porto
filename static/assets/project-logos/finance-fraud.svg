@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Finance fraud analytics logo</title>
+  <desc id="desc">A shield with a credit card, line chart and alert mark.</desc>
+  <rect width="160" height="160" rx="28" fill="#07111f"/>
+  <path d="M80 22l50 18v34c0 34-20 55-50 70-30-15-50-36-50-70V40l50-18z" fill="#12385f" stroke="#4fe0c6" stroke-width="7"/>
+  <rect x="47" y="58" width="66" height="44" rx="8" fill="#f7fbff"/>
+  <rect x="47" y="69" width="66" height="9" fill="#4fe0c6"/>
+  <path d="M54 113h18l9-15 11 20 10-30 13 25h16" fill="none" stroke="#ffcf5a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="113" cy="47" r="16" fill="#ff6b7a"/>
+  <path d="M113 38v13" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="113" cy="57" r="2.8" fill="#fff"/>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "total_transactions": 284807,
+  "fraud_transactions": 492,
+  "legitimate_transactions": 284315,
+  "fraud_rate_percent": 0.1727,
+  "total_transaction_amount": 25162590.01,
+  "fraud_transaction_amount": 60127.97,
+  "average_transaction_amount": 88.35,
+  "average_fraud_amount": 122.21,
+  "average_legitimate_amount": 88.29,
+  "max_transaction_amount": 25691.16,
+  "max_fraud_amount": 2125.87,
+  "dataset_source": "Kaggle: mlg-ulb/creditcardfraud",
+  "dataset_license": "DbCL-1.0"
+}
