@@ -17,7 +17,7 @@ This project demonstrates how technical biomedical-engineering outputs can be tr
 
 ## Tableau Public
 
-View the live dashboard on Tableau Public: https://public.tableau.com/app/profile/temi.omosekeji/viz/Can3DEyeRegistrationReliablyAlignHealthyandDiseasedEyes/NativeInteractiveDashboard
+View the live dashboard on Tableau Public: https://public.tableau.com/app/profile/temi.omosekeji/viz/Can3DEyeRegistrationReliablyAlignHealthyandDiseasedEyes-V3/NativeInteractiveDashboard
 
 ## File
 
