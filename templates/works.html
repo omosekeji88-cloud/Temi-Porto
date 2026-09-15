@@ -12,7 +12,7 @@
 <link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}?v=10">
 <title>{% block title %}Temidayo Omosekeji Engineering and Data Portfolio{% endblock %}</title>
 <link href="{{ url_for('static', filename='main.3f6952e4.css') }}?v=10" rel="stylesheet">
-<link href="{{ url_for('static', filename='portfolio.css') }}?v=23" rel="stylesheet">
+<link href="{{ url_for('static', filename='portfolio.css') }}?v=24" rel="stylesheet">
 
 </head>
 <body>
@@ -67,7 +67,11 @@
           <h4>002/008</h4>
           <h3>Tableau Eye Registration Dashboard</h3>
           <p class="project-tags">Tableau | Biomedical Data | Dashboard Design | Visual Analytics</p>
+          <a class="project-dashboard-preview" href="https://public.tableau.com/app/profile/temi.omosekeji/viz/Can3DEyeRegistrationReliablyAlignHealthyandDiseasedEyes/NativeInteractiveDashboard" target="_blank" rel="noopener" aria-label="Open Tableau Public eye registration dashboard">
+            <img src="{{ url_for('static', filename='assets/tableau/eye-registration-tableau-preview.png') }}" alt="Preview of Tableau eye registration dashboard">
+          </a>
           <p>Built a packaged Tableau workbook to communicate whether 3D registration can reliably align healthy and diseased eyes. The dashboard brings together ICP, CPD, deformation, PCA and lesion-analysis outputs from my dissertation pipeline.</p>
+          <a href="https://public.tableau.com/app/profile/temi.omosekeji/viz/Can3DEyeRegistrationReliablyAlignHealthyandDiseasedEyes/NativeInteractiveDashboard" class="btn btn-default" target="_blank" rel="noopener">Open Tableau Public</a>
           <a href="{{ url_for('static', filename='assets/tableau/eye-registration-tableau-dashboard.twbx') }}" class="btn btn-default" download>Download Workbook</a>
           <a href="https://github.com/omosekeji88-cloud/Temi-Porto/tree/main/projects/tableau-eye-registration-dashboard" class="btn btn-default" target="_blank" rel="noopener">View Notes</a>
         </div>

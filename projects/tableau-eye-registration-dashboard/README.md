@@ -15,6 +15,10 @@ The dashboard explores whether 3D registration can reliably align healthy and di
 
 This project demonstrates how technical biomedical-engineering outputs can be translated into an interactive dashboard for clearer communication. It shows experience with Tableau, dashboard design, visual analytics, data storytelling and the presentation of complex 3D modelling results to a non-specialist audience.
 
+## Tableau Public
+
+View the live dashboard on Tableau Public: https://public.tableau.com/app/profile/temi.omosekeji/viz/Can3DEyeRegistrationReliablyAlignHealthyandDiseasedEyes/NativeInteractiveDashboard
+
 ## File
 
 - `eye-registration-tableau-dashboard.twbx` is the packaged Tableau workbook.
